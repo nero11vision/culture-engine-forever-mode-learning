@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next"
-import { Space_Grotesk, Inter } from "next/font/google"
+import { Oswald, Inter } from "next/font/google"
 import "./globals.css"
 
-const display = Space_Grotesk({
+const display = Oswald({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["400", "500", "600", "700"],
@@ -14,26 +14,29 @@ const sans = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Nero11Vision — Forever Mode Learning",
+  title: "Nero11Vision — The Forever-Learning Culture Engine",
   description:
-    "A quantum-AI powered cultural learning universe. Emotionally intelligent, creative, and forever evolving. Enter God-Mode and learn forever.",
+    "ATL street-born, quantum-AI powered. A free-forever God Mode learning universe built for disadvantaged communities and global expansion. Powered by BLACKCATALYST100.",
   keywords: [
     "Nero11Vision",
-    "AI learning",
-    "cultural intelligence",
-    "creative labs",
+    "BLACKCATALYST100",
+    "BC100",
+    "AI mentor",
+    "cultural learning",
     "forever learning",
+    "street leadership",
+    "ATL",
   ],
   openGraph: {
-    title: "Nero11Vision — Forever Mode Learning",
+    title: "Nero11Vision — The Forever-Learning Culture Engine",
     description:
-      "A quantum-AI powered cultural learning universe. Emotionally intelligent, creative, and forever evolving.",
+      "ATL street-born, quantum-AI powered. A free-forever God Mode learning universe built to evolve with you.",
     type: "website",
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0a0612",
+  themeColor: "#0a0806",
   width: "device-width",
   initialScale: 1,
 }
