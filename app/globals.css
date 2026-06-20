@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-magenta: var(--neon-magenta);
+  --color-neon-violet: var(--neon-violet);
+  --color-neon-lime: var(--neon-lime);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+:root {
+  --background: oklch(0.13 0.02 280);
+  --foreground: oklch(0.97 0.01 280);
+  --card: oklch(0.17 0.03 285);
+  --card-foreground: oklch(0.97 0.01 280);
+  --muted: oklch(0.22 0.03 285);
+  --muted-foreground: oklch(0.68 0.03 285);
+  --border: oklch(0.3 0.04 290);
+  --primary: oklch(0.78 0.16 200);
+  --primary-foreground: oklch(0.13 0.02 280);
+  --accent: oklch(0.68 0.27 350);
+  --accent-foreground: oklch(0.98 0.01 280);
+  --neon-cyan: oklch(0.82 0.16 200);
+  --neon-magenta: oklch(0.68 0.27 350);
+  --neon-violet: oklch(0.65 0.24 295);
+  --neon-lime: oklch(0.88 0.2 130);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: 0 0 16px oklch(0.82 0.16 200 / 0.7), 0 0 36px oklch(0.82 0.16 200 / 0.4);
+  }
+  .text-glow-magenta {
+    text-shadow: 0 0 16px oklch(0.68 0.27 350 / 0.7), 0 0 36px oklch(0.68 0.27 350 / 0.4);
+  }
+  .neon-gradient-text {
+    background-image: linear-gradient(100deg, var(--neon-cyan), var(--neon-violet) 45%, var(--neon-magenta));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .neon-border {
+    box-shadow: 0 0 0 1px oklch(0.82 0.16 200 / 0.3), 0 0 28px oklch(0.65 0.24 295 / 0.25);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-26px) translateX(14px); }
+}
+@keyframes float-slow-rev {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(24px) translateX(-18px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+@keyframes gradient-pan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float-slow { animation: float-slow 14s ease-in-out infinite; }
+.animate-float-slow-rev { animation: float-slow-rev 16s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+.animate-gradient-pan {
+  background-size: 200% 200%;
+  animation: gradient-pan 8s ease infinite;
+}
+.animate-marquee { animation: marquee 40s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-slow-rev,
+  .animate-pulse-glow,
+  .animate-gradient-pan,
+  .animate-marquee { animation: none; }
+}
