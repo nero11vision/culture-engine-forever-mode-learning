@@ -1,31 +1,5 @@
-import { SiteNav } from "@/components/site-nav"
-import { Hero } from "@/components/hero"
-import { MarqueeBand } from "@/components/marquee-band"
-import { CharacterHub } from "@/components/character-hub"
-import { FalconEvolution } from "@/components/falcon-evolution"
-import { LearningModules } from "@/components/learning-modules"
-import { CommunityFeed } from "@/components/community-feed"
-import { CultureTimeline } from "@/components/culture-timeline"
-import { ThemeSongCarousel } from "@/components/theme-song-carousel"
-import { IntegrationHub } from "@/components/integration-hub"
-import { MissionOath } from "@/components/mission-oath"
-import { SiteFooter } from "@/components/site-footer"
+"use client";
 
-export default function Page() {
-  "use client";
-import { useEffect, useState } from "react";
-import { CharacterHub } from "@/components/character-hub";
-import { FalconEvolution } from "@/components/falcon-evolution";
-import { LearningModules } from "@/components/learning-modules";
-import { CommunityFeed } from "@/components/community-feed";
-import { CultureTimeline } from "@/components/culture-timeline";
-import { ThemeSongCarousel } from "@/components/theme-song-carousel";
-import { IntegrationHub } from "@/components/integration-hub";
-import { MissionOath } from "@/components/mission-oath";
-import { SiteFooter } from "@/components/site-footer";
-
-export default function Page() {
-  "use client";
 import { useEffect, useState } from "react";
 import { CharacterHub } from "@/components/character-hub";
 import { FalconEvolution } from "@/components/falcon-evolution";
@@ -39,6 +13,7 @@ import { SiteFooter } from "@/components/site-footer";
 
 export default function Page() {
   const [fade, setFade] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => setFade(true), 500);
     return () => clearTimeout(timer);
@@ -108,6 +83,10 @@ export default function Page() {
       </section>
 
       {/* Footer */}
+      <SiteFooter />
+    </main>
+  );
+}      {/* Footer */}
       <SiteFooter />
     </main>
   );
