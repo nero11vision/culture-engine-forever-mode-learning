@@ -20,10 +20,8 @@ export default function Page() {
         backgroundBlendMode: "overlay",
       }}
     >
-      {/* Glowing circuit aura */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FFD70022] to-black animate-pulse"></div>
 
-      {/* Hero headline */}
       <h1
         className={`text-6xl md:text-8xl font-extrabold tracking-wide ${
           fade ? "opacity-100 scale-100" : "opacity-0 scale-90"
@@ -36,7 +34,6 @@ export default function Page() {
         NERO11VISION
       </h1>
 
-      {/* Subheadline */}
       <p
         className={`mt-6 text-xl md:text-2xl max-w-3xl text-center ${
           fade ? "opacity-100" : "opacity-0"
@@ -50,13 +47,11 @@ export default function Page() {
         emotionally intelligent, radically creative, and forever evolving.
       </p>
 
-      {/* Motion aura */}
       <div className="absolute w-96 h-96 rounded-full bg-gradient-to-tr from-[#FFD70033] to-[#00000000] blur-3xl animate-spin-slow"></div>
 
-      {/* Call to action */}
       <button
         className="mt-12 px-8 py-4 border-2 border-gold text-gold font-bold text-lg rounded-full hover:bg-gold hover:text-black transition-all duration-500 shadow-[0_0_20px_#FFD700]"
-        onClick={() => alert('Entering God‑Mode Forever')}
+        onClick={() => alert("Entering God‑Mode Forever")}
       >
         Enter God‑Mode Forever
       </button>
