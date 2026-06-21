@@ -1,15 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CharacterHub } from "@/components/character-hub";
-import { FalconEvolution } from "@/components/falcon-evolution";
-import { LearningModules } from "@/components/learning-modules";
-import { CommunityFeed } from "@/components/community-feed";
-import { CultureTimeline } from "@/components/culture-timeline";
-import { ThemeSongCarousel } from "@/components/theme-song-carousel";
-import { IntegrationHub } from "@/components/integration-hub";
-import { MissionOath } from "@/components/mission-oath";
-import { SiteFooter } from "@/components/site-footer";
 
 export default function Page() {
   const [fade, setFade] = useState(false);
@@ -69,25 +60,6 @@ export default function Page() {
       >
         Enter God‑Mode Forever
       </button>
-
-      {/* Future AI‑powered sections */}
-      <section className="mt-24 w-full">
-        <CharacterHub />
-        <FalconEvolution />
-        <LearningModules />
-        <CommunityFeed />
-        <CultureTimeline />
-        <ThemeSongCarousel />
-        <IntegrationHub />
-        <MissionOath />
-      </section>
-
-      {/* Footer */}
-      <SiteFooter />
-    </main>
-  );
-}      {/* Footer */}
-      <SiteFooter />
     </main>
   );
 }
